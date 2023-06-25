@@ -4,7 +4,7 @@ exports.addProduct = async(req,res)=>{
   let addproduct = new Product({
     product_name:req.body.product_name,
     price:req.body.price,
-    image:req.body.image,
+    image:req.file.path,
     description:req.body.description,
     category:req.body.category
   })
